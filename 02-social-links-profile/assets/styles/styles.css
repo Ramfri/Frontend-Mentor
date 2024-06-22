@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,600,700);
+
+:root {
+  /* Colors */
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+
+  /* Fonts */
+  --primaryFont: "Inter";
+}
+
+body {
+  height: 100dvh;
+  font-size: 14px;
+  font-family: var(--primaryFont);
+  background-color: var(--off-black);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+.profile-card {
+  width: min(100%, 320px);
+  background-color: var(--dark-grey);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+
+  .profile-card__avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+
+  .profile-card__name {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .profile-card__location {
+    color: var(--green);
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .profile-card__bio {
+    margin-bottom: 20px;
+  }
+}
+
+.social-link{margin-bottom: 15px;}
+.social-link:last-of-type{margin-bottom: 0;}
+
+.social-link a {
+  transition: all 0.35s linear;
+  display: block;
+  height: 45px;
+  border-radius: 8px;
+  color: var(--white);
+  background-color: var(--grey);
+  line-height: 45px;
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover {
+    background-color: var(--green);
+    color: var(--dark-grey);
+  }
+}
