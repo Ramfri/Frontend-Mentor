@@ -1,5 +1,5 @@
 
-const enableAccordionItem = (item) => {
+const enableAccordionItem = (item, index) => {
     const header = item.querySelector('.item__header');
     const content = item.querySelector('.item__content');
     if(!header || !content) return;
@@ -9,6 +9,8 @@ const enableAccordionItem = (item) => {
         content.style.setProperty('--current-height', content.scrollHeight + "px");
         item.classList.toggle('active');
     })
+    
+    if(index === 0) header.click();
 }
 
 const enableAccordion = () => {
