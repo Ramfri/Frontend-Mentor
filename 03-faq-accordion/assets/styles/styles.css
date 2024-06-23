@@ -37,7 +37,7 @@ body::after{
 
 .faq{
     background-color: var(--white);
-    padding: 25px;
+    padding: 35px;
     border-radius: 10px;
     width: min(85%, 650px);
     
@@ -50,14 +50,14 @@ body::after{
     }
 
     .faq__title{
-        margin: 5px 0 0 0;
+        margin: 0;
     }
 }
 
 .accordion{
 
     .accordion__item{
-        padding: 20px 0;
+        padding: 10px 0;
         border-bottom: 1px solid var(--light-pink);
 
         &:last-of-type{
@@ -70,7 +70,7 @@ body::after{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            transition: margin 0.2s;
+            padding: 15px 0;
             
             .item__title{
                 font-weight: 700;
@@ -82,7 +82,7 @@ body::after{
                 width: 30px;
                 height: 30px;
                 background: url('../images/icon-plus.svg') center / cover no-repeat;
-                transition: background 0.3s;
+                transition: background 0.2s;
             }
 
         }
@@ -93,20 +93,23 @@ body::after{
 
             overflow: hidden;
             color: var(--grayish-purple);
-            animation: collapseItem 0.3s forwards;
+            animation: collapseItem 0.25s forwards;
         }
     }
 
     .accordion__item.active{
-        .item__header{
-            margin-bottom: 20px;
-            .item__button{
-                background-image: url('../images/icon-minus.svg');
-            }
+        padding-bottom: 20px;
+
+        &:last-of-type{
+            padding-bottom: 0;
+        }
+
+        .item__button{
+            background-image: url('../images/icon-minus.svg');
         }
 
         .item__content{
-            animation: expandItem 0.3s forwards;
+            animation: expandItem 0.25s forwards;
             height: auto;
         }
     }
