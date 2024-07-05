@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Todo app</title>
+    <link rel="stylesheet" href="assets/styles/normalize.css" />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+  </head>
+
+  <body class="">
+    <main class="todo-list">
+      <div class="todo-list__header">
+        <div class="title">
+          <h1>todo</h1>
+          <button id="changeThemeBtn"></button>
+        </div>
+
+        <div class="task">
+          <span class="task__status"></span>
+          <input
+            type="text"
+            name=""
+            id="newTaskInput"
+            class="task__content"
+            placeholder="What's next? Type and hit Enter to save..."
+          />
+          <span id="wordsCounter">80</span>
+        </div>
+      </div>
+
+      <div class="todo-list__body"></div>
+
+      <div class="todo-list__footer">
+        <span class="tasks-info"> 5 items left</span>
+        <div class="button-wrapper">
+          <button id="clearCompletedTask">Clear Completed</button>
+        </div>
+
+        <div class="todo-list__views">
+          <button id="allTaskView" class="active">All</button>
+          <button id="activeTaskView">Active</button>
+          <button id="completedTaskView">Completed</button>
+        </div>
+      </div>
+
+    </main>
+
+    <script src="assets/js/main.js" type="module"></script>
+  </body>
+</html>
