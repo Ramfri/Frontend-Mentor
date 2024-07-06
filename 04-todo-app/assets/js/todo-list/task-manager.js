@@ -1,27 +1,3 @@
-/*
-
-    Task manager se encarga de la logica
-
-    propiedades:
-    -- tareas del usuario -> { content: string, isCompleted: boolean}
-
-    metodos privados:
-    --validar tarea -> { valid: boolean, message: string }
-    --buscar tarea -> indice de la tarea : number  || null
-    --autoSaveTasks -> void
-
-    metodos expuestos:
-    --agregar tarea -> { success: boolean, message: string}
-    --actualizar estado de una tarea -> return { success: bolean, taskIsCompleted : boolean}
-    --eliminar una tarea -> return boolean
-
-
-    --TODO: filtrar tareas -> return array
-
-
-    TODO: Agregar una función que realize multiples validaciones al cargar las tareas
-    provenientes de localStorage para evitar alteraciones
-*/
 
 let userTasks = JSON.parse(localStorage.getItem('userTasks')) || [];
 
